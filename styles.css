@@ -1,8 +1,8 @@
-/* @keyframes blink {
+@keyframes blink {
     80% {
         visibility: hidden
     }
-} */
+}
 
 #output,
 #terminal,
@@ -22,10 +22,12 @@ h1 {
 }
 
 #terminal {
-    width: 80%;
+    width: 95%;
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    /* added */
     position: fixed;
     bottom: 0
 }
