@@ -1,3 +1,9 @@
+/* @keyframes blink {
+    80% {
+        visibility: hidden
+    }
+} */
+
 #output,
 #terminal,
 body {
@@ -6,19 +12,70 @@ body {
 }
 
 body {
-    font-family: "Inconsolata", monospace;
-    font-size: 16px
+    font-family: "Inconsolata", monospace
 }
 
-#output,
-#terminal {
-    padding: 20px;
-    border-radius: 10px
+h1 {
+    font-size: 2em;
+    text-align: center;
+    animation: blink .5s step-end infinite
 }
 
 #terminal {
     width: 80%;
-    margin: 50px auto
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 0
+}
+
+@media only screen and (min-width:375px) {
+    #terminal {
+        font-size: 1.2em
+    }
+}
+
+@media only screen and (min-width:414px) {
+    #terminal {
+        font-size: 1.4em
+    }
+}
+
+@media only screen and (min-width:390px) {
+    #terminal {
+        font-size: 1.4em
+    }
+}
+
+@media only screen and (min-width:428px) {
+    #terminal {
+        font-size: 1.6em
+    }
+}
+
+@media only screen and (min-width:810px) {
+    #terminal {
+        font-size: 1.8em
+    }
+}
+
+@media only screen and (min-width:384px) {
+    #terminal {
+        font-size: 1.6em
+    }
+}
+
+@media only screen and (min-width:412px) {
+    #terminal {
+        font-size: 1.8em
+    }
+}
+
+@media only screen and (min-width:30px) {
+    #terminal {
+        font-size: 1.8em
+    }
 }
 
 #output {
@@ -46,44 +103,8 @@ body {
     font-family: "Inconsolata", monospace
 }
 
-@media (max-width:414px) {
-    body {
-        font-size: 14px
-    }
-
-    #input {
-        padding: 8px
-    }
-
-    #path {
-        font-size: 12px
-    }
-}
-
-@media (min-width:768px) and (max-width:1024px) {
-    body {
-        font-size: 18px
-    }
-
-    #input {
-        padding: 12px
-    }
-
-    #path {
-        font-size: 16px
-    }
-}
-
-@media (min-width:1025px) {
-    body {
-        font-size: 20px
-    }
-
-    #input {
-        padding: 14px
-    }
-
-    #path {
-        font-size: 18px
-    }
+#input:focus::before {
+    content: "|";
+    visibility: visible;
+    animation: blink .5s step-end infinite
 }

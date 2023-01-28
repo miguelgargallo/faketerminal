@@ -1,6 +1,7 @@
 // grab the elements from the DOM
 const input = document.getElementById("input");
 const output = document.getElementById("output");
+const h1 = document.getElementById("terminal-header")
 
 // listen to the enter key
 input.addEventListener("keyup", function (event) {
@@ -32,3 +33,5 @@ function handleCommand(command) {
     }
 
 }
+
+h1.innerHTML = "Miguel Gargallo's Terminal";
