@@ -117,46 +117,40 @@ The input element has width of 100%, padding of 10px, border is set to none, bor
 ## About the JS
 
 ```js
+// grab the elements from the DOM
 const input = document.getElementById("input");
 const output = document.getElementById("output");
-const path = document.getElementById("path");
 
-const commands = {
-  "about": aboutCommand
-};
-
-function handleCommand(e) {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    const value = input.value;
-    input.value = "";
-
-    // Split the input value by space to get the command and arguments
-    const parts = value.split(" ");
-    const command = parts[0];
-    const args = parts.slice(1);
-
-    if (commands[command]) {
-      // Call the function associated with the command
-      commands[command](args);
-    } else {
-      output.innerHTML = "Command not found: " + command;
+// listen to the enter key
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        const command = input.value;
+        input.value = "";
+        handleCommand(command);
     }
-  }
-}
+});
 
-function aboutCommand(args) {
-  fetch('commands/about.md')
-    .then(res => res.text())
-    .then(data => {
-      output.innerHTML = data;
-    })
-    .catch(err => {
-      console.log(err);
-    });
-}
+function handleCommand(command) {
+    if (command === "about") {
+        output.innerHTML = `
+    I am Miguel Gargallo
 
-input.addEventListener("keydown", handleCommand);
+    I am a web developer since my 12ths, I began with small sites on html, css and javascript, then I started to learn PHP and MySQL, and I have been working with them since then.
+
+    I have worked with many technologies, ultimately I have been working with React, Node, Svelte, PocketBase, Next.js, and many other technologies.
+
+    I created the Sushi JS Framework, a fork of React with over 1K downloads per month, and I have been working with it for over 2 weeks.
+
+    My last project was Zenix, a fork Framework of Astro, with over 2.2K downloads on the first week.
+    `;
+    } else if (command === "help") {
+        output.innerHTML = `You can type "about" to know more about me`;
+    } else {
+        output.innerHTML = `<p>Command not found: ${command}</p>`;
+    }
+
+}
 ```
 
 This style sheet sets the background color of the body to black, the text color to white, and the font-family to "Inconsolata", a monospace font.

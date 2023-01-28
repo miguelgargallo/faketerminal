@@ -15,7 +15,7 @@ input.addEventListener("keyup", function (event) {
 function handleCommand(command) {
     if (command === "about") {
         output.innerHTML = `
-    # Miguel Gargallo
+    I am Miguel Gargallo
 
     I am a web developer since my 12ths, I began with small sites on html, css and javascript, then I started to learn PHP and MySQL, and I have been working with them since then.
 
@@ -25,7 +25,10 @@ function handleCommand(command) {
 
     My last project was Zenix, a fork Framework of Astro, with over 2.2K downloads on the first week.
     `;
+    } else if (command === "help") {
+        output.innerHTML = `You can type "about" to know more about me`;
     } else {
         output.innerHTML = `<p>Command not found: ${command}</p>`;
     }
+
 }
