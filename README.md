@@ -2,6 +2,8 @@
 
 - [Fake Terminal HTML](#fake-terminal-html)
   - [Description](#description)
+  - [Last Updates](#last-updates)
+    - [gh 0.0.5 | The Viewport Update:](#gh-005--the-viewport-update)
   - [Tree of the project](#tree-of-the-project)
   - [About the CSS](#about-the-css)
   - [About the JS](#about-the-js)
@@ -25,6 +27,12 @@ To display the output of the command, we can create a new HTML element, such as 
 
 To emulate the terminal experience we can use libraries like xterm.js which can handle terminal emulation in web applications.
 
+
+## Last Updates
+
+### gh 0.0.5 | The Viewport Update:
+
+iphone 11 viewport is 375, 11 pro is 414, iPhone 12 mini is 390, iphone 12 is 428, ipad 810, galaxy s20+ is 384, s20 ultra is 412, S20 is 30, adapt the site and fonts to display better on this resolutions
 
 ## Tree of the project
 
