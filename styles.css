@@ -17,19 +17,14 @@ body {
 
 h1 {
     font-size: 2em;
-    text-align: center;
-    animation: blink .5s step-end infinite
+    text-align: center
 }
 
 #terminal {
-    width: 95%;
+    width: 80%;
     margin: 50px auto;
     padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    /* added */
-    position: fixed;
-    bottom: 0
+    border-radius: 10px
 }
 
 @media only screen and (min-width:375px) {
