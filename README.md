@@ -30,15 +30,21 @@ To emulate the terminal experience we can use libraries like xterm.js which can 
 
 ```
 .
+├── CHANGELOG.md
+├── LICENSE.md
+├── README.md
 ├── commands
-│   └── about.md
+│   └── about.js
 ├── fonts
 ├── index.html
 ├── js
+│   ├── README.md
 │   └── main.js
 ├── pages
 ├── public
+│   └── sources.md
 └── style
+    ├── README.md
     └── styles.css
 ```
 

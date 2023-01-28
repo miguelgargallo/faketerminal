@@ -1,40 +1,31 @@
+// grab the elements from the DOM
 const input = document.getElementById("input");
 const output = document.getElementById("output");
-const path = document.getElementById("path");
 
-const commands = {
-    "about": aboutCommand
-};
-
-function handleCommand(e) {
-    if (e.key === "Enter") {
-        e.preventDefault();
-        const value = input.value;
+// listen to the enter key
+input.addEventListener("keyup", function (event) {
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        const command = input.value;
         input.value = "";
+        handleCommand(command);
+    }
+});
 
-        // Split the input value by space to get the command and arguments
-        const parts = value.split(" ");
-        const command = parts[0];
-        const args = parts.slice(1);
+function handleCommand(command) {
+    if (command === "about") {
+        output.innerHTML = `
+    # Miguel Gargallo
 
-        if (commands[command]) {
-            // Call the function associated with the command
-            commands[command](args);
-        } else {
-            output.innerHTML = "Command not found: " + command;
-        }
+    I am a web developer since my 12ths, I began with small sites on html, css and javascript, then I started to learn PHP and MySQL, and I have been working with them since then.
+
+    I have worked with many technologies, ultimately I have been working with React, Node, Svelte, PocketBase, Next.js, and many other technologies.
+
+    I created the Sushi JS Framework, a fork of React with over 1K downloads per month, and I have been working with it for over 2 weeks.
+
+    My last project was Zenix, a fork Framework of Astro, with over 2.2K downloads on the first week.
+    `;
+    } else {
+        output.innerHTML = `<p>Command not found: ${command}</p>`;
     }
 }
-
-function aboutCommand(args) {
-    fetch('commands/about.md')
-        .then(res => res.text())
-        .then(data => {
-            output.innerHTML = data;
-        })
-        .catch(err => {
-            console.log(err);
-        });
-}
-
-input.addEventListener("keydown", handleCommand);
