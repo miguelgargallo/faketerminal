@@ -9,9 +9,7 @@
 
 ## Description
 
-Based on our description, it sounds like we're looking to create a simple, single-page web application that mimics the look and feel of a terminal, and allows users to interact with it by entering commands.
-
-Here are a few tips to help us to get started:
+We're looking to create a simple, single-page web application that mimics the look and feel of a terminal, and allows users to interact with it by entering commands.
 
 For the lawet, we can use CSS to style the HTML elements to make it look like a terminal. we can use a monospace font and set the background color to black.
 
