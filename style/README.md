@@ -2,48 +2,51 @@
 ## About the CSS
 
 ```css
+#output,
+#terminal,
 body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Inconsolata', monospace;
+    background-color: #000;
+    color: #fff
+}
+
+body {
+    font-family: "Inconsolata", monospace
+}
+
+#output,
+#terminal {
+    padding: 20px;
+    border-radius: 10px
 }
 
 #terminal {
-  width: 80%;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 10px;
+    width: 80%;
+    margin: 50px auto
 }
 
 #output {
-  margin-bottom: 20px;
-  padding: 20px;
-  background-color: #000;
-  color: #fff;
-  border-radius: 10px;
-  overflow: auto;
-  max-height: 300px;
+    margin-bottom: 20px;
+    overflow: auto;
+    max-height: 300px
 }
 
 #prompt {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center
 }
 
 #path {
-  font-size: 14px;
+    font-size: 14px
 }
 
 #input {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  background-color: #000;
-  color: #fff;
-  font-family: 'Inconsolata', monospace;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    font-family: "Inconsolata", monospace
 }
 ```
 
