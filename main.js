@@ -32,7 +32,7 @@ function draw() {
 
 setInterval(draw, 33);
 
-if (window.innerWidth < 600) {
+if (window.innerWidth < 1139) {
     h1.innerHTML = "Miguel <br> Gargallo's <br> Terminal";
 }
 
