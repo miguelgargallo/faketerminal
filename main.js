@@ -11,7 +11,7 @@ input.addEventListener("keyup", function (event) {
 });
 
 function handleCommand(command) {
-    if (command === "acerca") {
+    if (command === "acerca".toLowerCase()) {
         output.innerHTML = `
         Soy una persona apasionada por el desarrollo y las nuevas tecnologías, con una gran experiencia en lenguajes de programación como HTML, CSS, PHP, Java, Javascript, C, C++, Swift, Shell, Solidity y herramientas como Visual Studio 2019, 2022, Visual Studio Code, Xcode, Github Desktop.
         
@@ -20,7 +20,7 @@ function handleCommand(command) {
         Además, tengo experiencia en proyectos innovadores como montar una web con panel dns en la blockchain, un portal que alquila dominios web con extensiones descentralizadas en la blockchain de Handshake, un panel de Plesk en la blockchain y un Wordpress con panel de Plesk en la blockchain. Mi interés por la tecnología se despertó desde pequeño, y a lo largo de mi vida he cursado estudios en Administración y Dirección de Empresas y en Marketing y Comunicación Digital para desarrollar una base sólida en empresariales y márketing.
         
         Actualmente soy el primer español en montar una web con panel dns en la blockchain y estoy enfocado en seguir innovando en este campo.    `;
-    } else if (command === "about") {
+    } else if (command === "about".toLowerCase()) {
         output.innerHTML = `
         I am a passionate person about development and new technologies, with great experience in programming languages such as HTML, CSS, PHP, Java, Javascript, C, C++, Swift, Shell, Solidity and tools such as Visual Studio 2019, 2022, Visual Studio Code, Xcode, Github Desktop.
         
