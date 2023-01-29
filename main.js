@@ -10,20 +10,26 @@ input.addEventListener("keyup", function (event) {
     }
 });
 
-async function handleCommand(command) {
+async function handleCommand(input) {
     output.innerHTML = "";
     try {
         const response = await fetch('https://raw.githubusercontent.com/superdatas/terminal-text/main/commands.json');
         const commands = await response.json();
-        if (commands.commands[command]) {
-            commands.commands[command].text.forEach(function (text) {
+        if (commands.commands[input]) {
+            commands.commands[input].text.forEach(function (text) {
                 output.innerHTML += `<p>${text}</p>`;
             });
         } else {
-            output.innerHTML = `<p>Command not found: ${command}</p>`;
+            const response = await fetch('https://raw.githubusercontent.com/superdatas/terminal-text/main/actions.json');
+            const actions = await response.json();
+            if (actions.actions[input]) {
+                window.open(actions.actions[input].link[0]);
+            } else {
+                output.innerHTML = `<p>Command or action not found: ${input}</p>`;
+            }
         }
     } catch (error) {
         console.error(error);
-        output.innerHTML = '<p>An error occurred while loading commands</p>';
+        output.innerHTML = '<p>An error occurred while loading commands and actions</p>';
     }
 }
