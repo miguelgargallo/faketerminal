@@ -1,6 +1,7 @@
 # Update Log
 
 - [Update Log](#update-log)
+  - [gh 0.0.9 | JS and HTML Content](#gh-009--js-and-html-content)
   - [gh 0.0.8 | CSS Optimized](#gh-008--css-optimized)
   - [gh 0.0.8 | Readme Optimized](#gh-008--readme-optimized)
   - [gh 0.0.7 | Blinked not blinking](#gh-007--blinked-not-blinking)
@@ -10,6 +11,7 @@
   - [gh 0.0.3 | It prints about!](#gh-003--it-prints-about)
   - [gh 0.0.1 | Surce Code](#gh-001--surce-code)
 
+## gh 0.0.9 | JS and HTML Content
 ## gh 0.0.8 | CSS Optimized
 ## gh 0.0.8 | Readme Optimized
 ## gh 0.0.7 | Blinked not blinking
