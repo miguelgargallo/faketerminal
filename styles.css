@@ -16,6 +16,9 @@ h1 {
 
 h1 {
     animation: falling-text 3s, matrix-text 0.1s 5;
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff00;
+    text-shadow: 0 0 10px #00ff00;
 }
 
 @media only screen and (max-width: 600px) {

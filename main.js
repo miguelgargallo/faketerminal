@@ -1,6 +1,10 @@
 const input = document.getElementById("input");
 const output = document.getElementById("output");
 
+if (window.innerWidth < 600) {
+    h1.innerHTML = "Miguel <br> Gargallo's <br> Terminal";
+}
+
 let intervalId;
 
 window.onload = function () {
