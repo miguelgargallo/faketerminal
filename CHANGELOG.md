@@ -1,7 +1,7 @@
 # Update Log
 
 - [Update Log](#update-log)
-  - [gh 0.0.13 | Iproved experience on phones](#gh-0013--iproved-experience-on-phones)
+  - [gh 0.0.13 | Improved experience on phones](#gh-0013--improved-experience-on-phones)
   - [gh 0.0.12 | Console cleans after last command](#gh-0012--console-cleans-after-last-command)
   - [gh 0.0.11 | Commands and content remotely stored](#gh-0011--commands-and-content-remotely-stored)
   - [gh 0.0.10 | Case sensitive detection](#gh-0010--case-sensitive-detection)
@@ -16,7 +16,7 @@
   - [gh 0.0.1 | Surce Code](#gh-001--surce-code)
 
 
-## gh 0.0.13 | Iproved experience on phones
+## gh 0.0.13 | Improved experience on phones
 ## gh 0.0.12 | Console cleans after last command
 ## gh 0.0.11 | Commands and content remotely stored
 ## gh 0.0.10 | Case sensitive detection
