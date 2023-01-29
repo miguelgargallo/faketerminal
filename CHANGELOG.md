@@ -1,6 +1,8 @@
 # Update Log
 
+
 - [Update Log](#update-log)
+  - [gh 0.0.17 | CSS Optimized](#gh-0017--css-optimized)
   - [gh 0.0.16 | Cool background effect](#gh-0016--cool-background-effect)
   - [gh 0.0.15 | Cool title effect](#gh-0015--cool-title-effect)
   - [gh 0.0.14 | Social links redirects](#gh-0014--social-links-redirects)
@@ -18,6 +20,8 @@
   - [gh 0.0.3 | It prints about!](#gh-003--it-prints-about)
   - [gh 0.0.1 | Surce Code](#gh-001--surce-code)
 
+
+## gh 0.0.17 | CSS Optimized
 ## gh 0.0.16 | Cool background effect
 ## gh 0.0.15 | Cool title effect
 ## gh 0.0.14 | Social links redirects
