@@ -24,7 +24,7 @@ async function handleCommand(input) {
             const actions = await actionsResponse.json();
             if (actions.actions[input]) {
                 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                    window.location.href = actions.actions[input].link[0];
+                    window.location.replace(actions.actions[input].link[0]);
                 } else {
                     window.open(actions.actions[input].link[0]);
                 }
