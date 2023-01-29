@@ -1,7 +1,7 @@
 #output,
 #terminal,
 body {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0);
     color: #fff
 }
 
