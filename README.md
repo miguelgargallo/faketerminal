@@ -1,6 +1,6 @@
-# Fake Terminal HTML
+# Terminal Site
 
-- [Fake Terminal HTML](#fake-terminal-html)
+- [Terminal Site](#terminal-site)
   - [Description](#description)
   - [About gh 0.0.11 Update](#about-gh-0011-update)
   - [Tree of the project](#tree-of-the-project)
