@@ -27,14 +27,6 @@ h1 {
     max-height: 300px
 }
 
-#prompt {
-    display: flex;
-    align-items: center
-}
-
-#path {
-    font-size: 14px
-}
 
 #input {
     width: 100%;
@@ -43,7 +35,18 @@ h1 {
     border-radius: 10px;
     background-color: #000;
     color: #fff;
-    font-family: "Inconsolata", monospace
+    font-family: "Inconsolata", monospace;
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%
+}
+
+#prompt {
+    display: flex;
+    align-items: center
+}
+
+#path {
+    font-size: 14px
 }
 
 @media only screen and (min-width:375px) {
