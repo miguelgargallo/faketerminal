@@ -19,9 +19,9 @@ body {
     font-family: "Inconsolata", monospace
 }
 
-h2,
-h1 {
-    font-size: 2em;
+h1,
+h2 {
+    font-size: 32px;
     text-align: center;
     font-family: "Courier New", Courier, monospace;
     color: #0f0;
@@ -76,15 +76,13 @@ h1 {
     font-size: 14px
 }
 
-/* on non mobiles hide h2 */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width:600px) {
     h2 {
         display: none
     }
 }
 
-/* on non tablets or computers hide h1 */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width:600px) {
     h1 {
         display: none
     }
@@ -92,54 +90,54 @@ h1 {
 
 @media only screen and (min-width:375px) {
     #terminal {
-        font-size: 1.2em
+        font-size: 14px
     }
 }
 
 @media only screen and (min-width:414px) {
     #terminal {
-        font-size: 1.4em
+        font-size: 16px
     }
 }
 
 @media only screen and (min-width:390px) {
     #terminal {
-        font-size: 1.4em
+        font-size: 16px
     }
 }
 
 @media only screen and (min-width:428px) {
     #terminal {
-        font-size: 1.6em
+        font-size: 26px
     }
 }
 
 @media only screen and (min-width:810px) {
     #terminal {
-        font-size: 1.8em
+        font-size: 29px
     }
 }
 
 @media only screen and (min-width:384px) {
     #terminal {
-        font-size: 1.6em
+        font-size: 26px
     }
 }
 
 @media only screen and (min-width:412px) {
     #terminal {
-        font-size: 1.8em
+        font-size: 29px
     }
 }
 
 @media only screen and (min-width:30px) {
     #terminal {
-        font-size: 1.8em
+        font-size: 29px
     }
 }
 
 @media only screen and (max-width:600px) {
     h1 {
-        font-size: 1.5em
+        font-size: 24px
     }
 }
