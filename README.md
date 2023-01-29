@@ -5,8 +5,8 @@
   - [Last Updates](#last-updates)
     - [gh 0.0.5 | The Viewport Update:](#gh-005--the-viewport-update)
   - [Tree of the project](#tree-of-the-project)
-  - [About the CSS](#about-the-css)
   - [About the JS](#about-the-js)
+  - [About the CSS](#about-the-css)
   - [Updates](#updates)
   - [License](#license)
 
@@ -27,6 +27,11 @@ To display the output of the command, we can create a new HTML element, such as 
 
 To emulate the terminal experience we can use libraries like xterm.js which can handle terminal emulation in web applications.
 
+The index.html file is the main file of a website, it's where the HTML code for the website is located. It starts with a doctype declaration, which is used to indicate that the document is an HTML document. Then it has a head section which includes the title of the website, a link to the styles.css file, a link to a Google font, and a meta tag for the viewport. The body section includes the structure of the website and includes a div with an id of "terminal" which contains the elements of the website such as the heading, output, prompt and input elements. The script src is also included at the bottom of the file linking the main.js file.
+
+The main.js file is a JavaScript file that is used to add interactivity to the website. It starts by grabbing elements from the DOM (Document Object Model) using the getElementById method, and adding an event listener to the input element that listens for the enter key. When the enter key is pressed, it calls the handleCommand function and passes the input value as an argument. The handleCommand function checks the command value and depending on the command, it updates the output element's innerHTML with the corresponding text.
+
+The styles.css file is a file that is used to style the website. It includes CSS code that styles the elements in the website such as the body, output, terminal, and input elements. It uses CSS selectors to target specific elements and apply styles to them. It also includes media queries which are used to change the styles of elements based on the screen size.
 
 ## Last Updates
 
@@ -57,77 +62,13 @@ iphone 11 viewport is 375, 11 pro is 414, iPhone 12 mini is 390, iphone 12 is 42
 ```
 
 
-## About the CSS
-
-```css
-#output,
-#terminal,
-body {
-    background-color: #000;
-    color: #fff
-}
-
-body {
-    font-family: "Inconsolata", monospace
-}
-
-#output,
-#terminal {
-    padding: 20px;
-    border-radius: 10px
-}
-
-#terminal {
-    width: 80%;
-    margin: 50px auto
-}
-
-#output {
-    margin-bottom: 20px;
-    overflow: auto;
-    max-height: 300px
-}
-
-#prompt {
-    display: flex;
-    align-items: center
-}
-
-#path {
-    font-size: 14px
-}
-
-#input {
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    border-radius: 10px;
-    background-color: #000;
-    color: #fff;
-    font-family: "Inconsolata", monospace
-}
-```
-
-
-This style sheet sets the background color of the body to black, the text color to white, and the font-family to "Inconsolata", a monospace font.
-
-The terminal element has a width of 80%, is centered on the page, has a padding of 20px, a black background and white text, and a border-radius of 10px.
-
-The output element has a margin-bottom of 20px, padding of 20px, background color of black, text color of white, border-radius of 10px, and overflow property is set to auto with max-height of 300px.
-
-The prompt element has display set to flex and align-items set to center.
-
-The path element has font-size of 14px.
-
-The input element has width of 100%, padding of 10px, border is set to none, border-radius of 10px, background color of black, text color of white, and font-family of 'Inconsolata', monospace.
-
-
 ## About the JS
 
 ```js
 // grab the elements from the DOM
 const input = document.getElementById("input");
 const output = document.getElementById("output");
+const h1 = document.getElementById("terminal-header")
 
 // listen to the enter key
 input.addEventListener("keyup", function (event) {
@@ -159,19 +100,123 @@ function handleCommand(command) {
     }
 
 }
+
+h1.innerHTML = "Miguel Gargallo's Terminal";
 ```
 
-This style sheet sets the background color of the body to black, the text color to white, and the font-family to "Inconsolata", a monospace font.
 
-The terminal element has a width of 80%, is centered on the page, has a padding of 20px, a black background and white text, and a border-radius of 10px.
 
-The output element has a margin-bottom of 20px, padding of 20px, background color of black, text color of white, border-radius of 10px, and overflow property is set to auto with max-height of 300px.
+## About the CSS
 
-The prompt element has display set to flex and align-items set to center.
+```css
+@keyframes blink {
+    80% {
+        visibility: hidden
+    }
+}
 
-The path element has font-size of 14px.
+#output,
+#terminal,
+body {
+    background-color: #000;
+    color: #fff
+}
 
-The input element has width of 100%, padding of 10px, border is set to none, border-radius of 10px, background color of black, text color of white, and font-family of 'Inconsolata', monospace.
+body {
+    font-family: "Inconsolata", monospace
+}
+
+h1 {
+    font-size: 2em;
+    text-align: center
+}
+
+#terminal {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px
+}
+
+@media only screen and (min-width:375px) {
+    #terminal {
+        font-size: 1.2em
+    }
+}
+
+@media only screen and (min-width:414px) {
+    #terminal {
+        font-size: 1.4em
+    }
+}
+
+@media only screen and (min-width:390px) {
+    #terminal {
+        font-size: 1.4em
+    }
+}
+
+@media only screen and (min-width:428px) {
+    #terminal {
+        font-size: 1.6em
+    }
+}
+
+@media only screen and (min-width:810px) {
+    #terminal {
+        font-size: 1.8em
+    }
+}
+
+@media only screen and (min-width:384px) {
+    #terminal {
+        font-size: 1.6em
+    }
+}
+
+@media only screen and (min-width:412px) {
+    #terminal {
+        font-size: 1.8em
+    }
+}
+
+@media only screen and (min-width:30px) {
+    #terminal {
+        font-size: 1.8em
+    }
+}
+
+#output {
+    margin-bottom: 20px;
+    overflow: auto;
+    max-height: 300px
+}
+
+#prompt {
+    display: flex;
+    align-items: center
+}
+
+#path {
+    font-size: 14px
+}
+
+#input {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    font-family: "Inconsolata", monospace
+}
+
+#input:focus::before {
+    content: "|";
+    visibility: visible;
+    animation: blink .5s step-end infinite
+}
+```
 
 
 ## Updates
