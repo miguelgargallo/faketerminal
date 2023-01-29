@@ -1,11 +1,10 @@
-// grab the elements from the DOM
 const input = document.getElementById("input");
 const output = document.getElementById("output");
 
 input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
-        const command = input.value;
+        const command = input.value.toLowerCase(); // convert the input value to lowercase
         input.value = "";
         handleCommand(command);
     }
@@ -29,8 +28,7 @@ function handleCommand(command) {
         
         Additionally, I have experience in innovative projects such as setting up a web with a dns panel on the blockchain, a portal that rents web domains with decentralized extensions on the Handshake blockchain, a Plesk panel on the blockchain and a Wordpress with Plesk panel on the blockchain. My interest in technology was awakened from a young age, and throughout my life I have studied Business Administration and Management and Digital Marketing and Communication to develop a solid foundation in business and marketing.
         
-        Currently, I am the first Spanish person to set up a web with a dns panel on the blockchain and I am focused on continuing to innovate in this field.
-        `;
+        Currently, I am the first Spanish person to set up a web with a dns panel on the blockchain and I am focused on continuing to innovate in this field.   `;
     } else if (command === "help") {
         output.innerHTML = `You can type "about" or "acerca" to know more about me in english or spanish`;
     } else {
