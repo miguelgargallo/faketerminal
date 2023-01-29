@@ -1,7 +1,7 @@
 // grab the elements from the DOM
 const input = document.getElementById("input");
 const output = document.getElementById("output");
-// listen to the enter key
+
 input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
