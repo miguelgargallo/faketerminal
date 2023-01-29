@@ -2,8 +2,7 @@
 
 - [Fake Terminal HTML](#fake-terminal-html)
   - [Description](#description)
-  - [Last Updates](#last-updates)
-    - [gh 0.0.5 | The Viewport Update:](#gh-005--the-viewport-update)
+  - [About gh 0.0.11 Update](#about-gh-0011-update)
   - [Tree of the project](#tree-of-the-project)
   - [About the JS](#about-the-js)
   - [About the CSS](#about-the-css)
@@ -33,88 +32,62 @@ The main.js file is a JavaScript file that is used to add interactivity to the w
 
 The styles.css file is a file that is used to style the website. It includes CSS code that styles the elements in the website such as the body, output, terminal, and input elements. It uses CSS selectors to target specific elements and apply styles to them. It also includes media queries which are used to change the styles of elements based on the screen size.
 
-## Last Updates
 
-### gh 0.0.5 | The Viewport Update:
+## About gh 0.0.11 Update
 
-iphone 11 viewport is 375, 11 pro is 414, iPhone 12 mini is 390, iphone 12 is 428, ipad 810, galaxy s20+ is 384, s20 ultra is 412, S20 is 30, adapt the site and fonts to display better on this resolutions
+In this version, the commands and the content of the about page are stored remotely, so you can add more commands and content without having to update the code. This also improves the security of the website, since the content is not stored in the source code. Performance is also improved, since the content is loaded only when the user requests it.
+
 
 ## Tree of the project
 
 ```
-.
+* Terminal Site
 ├── CHANGELOG.md
 ├── LICENSE.md
 ├── README.md
-├── commands
-│   └── about.js
-├── fonts
 ├── index.html
-├── js
-│   ├── README.md
-│   └── main.js
-├── pages
-├── public
-│   └── sources.md
-└── style
-    ├── README.md
-    └── styles.css
+├── main.js
+└── styles.css
 ```
 
 
 ## About the JS
 
 ```js
-// grab the elements from the DOM
 const input = document.getElementById("input");
 const output = document.getElementById("output");
-const h1 = document.getElementById("terminal-header")
 
-// listen to the enter key
 input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
-        const command = input.value;
+        const command = input.value.toLowerCase();
         input.value = "";
         handleCommand(command);
     }
 });
 
-function handleCommand(command) {
-    if (command === "about") {
-        output.innerHTML = `
-    I am Miguel Gargallo
-
-    I am a web developer since my 12ths, I began with small sites on html, css and javascript, then I started to learn PHP and MySQL, and I have been working with them since then.
-
-    I have worked with many technologies, ultimately I have been working with React, Node, Svelte, PocketBase, Next.js, and many other technologies.
-
-    I created the Sushi JS Framework, a fork of React with over 1K downloads per month, and I have been working with it for over 2 weeks.
-
-    My last project was Zenix, a fork Framework of Astro, with over 2.2K downloads on the first week.
-    `;
-    } else if (command === "help") {
-        output.innerHTML = `You can type "about" to know more about me`;
-    } else {
-        output.innerHTML = `<p>Command not found: ${command}</p>`;
+async function handleCommand(command) {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/superdatas/terminal-text/main/commands.json');
+        const commands = await response.json();
+        if (commands.commands[command]) {
+            commands.commands[command].text.forEach(function (text) {
+                output.innerHTML += `<p>${text}</p>`;
+            });
+        } else {
+            output.innerHTML = `<p>Command not found: ${command}</p>`;
+        }
+    } catch (error) {
+        console.error(error);
+        output.innerHTML = '<p>An error occurred while loading commands</p>';
     }
-
 }
-
-h1.innerHTML = "Miguel Gargallo's Terminal";
 ```
-
 
 
 ## About the CSS
 
 ```css
-@keyframes blink {
-    80% {
-        visibility: hidden
-    }
-}
-
 #output,
 #terminal,
 body {
@@ -136,6 +109,31 @@ h1 {
     margin: 50px auto;
     padding: 20px;
     border-radius: 10px
+}
+
+#output {
+    margin-bottom: 20px;
+    overflow: auto;
+    max-height: 300px
+}
+
+#prompt {
+    display: flex;
+    align-items: center
+}
+
+#path {
+    font-size: 14px
+}
+
+#input {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #000;
+    color: #fff;
+    font-family: "Inconsolata", monospace
 }
 
 @media only screen and (min-width:375px) {
@@ -184,37 +182,6 @@ h1 {
     #terminal {
         font-size: 1.8em
     }
-}
-
-#output {
-    margin-bottom: 20px;
-    overflow: auto;
-    max-height: 300px
-}
-
-#prompt {
-    display: flex;
-    align-items: center
-}
-
-#path {
-    font-size: 14px
-}
-
-#input {
-    width: 100%;
-    padding: 10px;
-    border: 0;
-    border-radius: 10px;
-    background-color: #000;
-    color: #fff;
-    font-family: "Inconsolata", monospace
-}
-
-#input:focus::before {
-    content: "|";
-    visibility: visible;
-    animation: blink .5s step-end infinite
 }
 ```
 
