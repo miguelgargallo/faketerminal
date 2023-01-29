@@ -11,6 +11,7 @@ input.addEventListener("keyup", function (event) {
 });
 
 async function handleCommand(command) {
+    output.innerHTML = "";
     try {
         const response = await fetch('https://raw.githubusercontent.com/superdatas/terminal-text/main/commands.json');
         const commands = await response.json();
