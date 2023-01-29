@@ -1,6 +1,31 @@
 const input = document.getElementById("input");
 const output = document.getElementById("output");
 
+let intervalId;
+
+window.onload = function () {
+    matrixTextEffect();
+}
+
+function matrixTextEffect() {
+    let h1 = document.querySelector("h1");
+    let possibleChars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let text = h1.textContent;
+    intervalId = setInterval(() => {
+        let newText = "";
+        for (let i = 0; i < text.length; i++) {
+            newText += possibleChars.charAt(Math.floor(Math.random() * possibleChars.length));
+        }
+        h1.textContent = newText;
+    }, 50);
+
+    setTimeout(() => {
+        clearInterval(intervalId);
+        h1.textContent = "Miguel Gargallo's Terminal";
+    }, 3000);
+}
+
+
 input.addEventListener("keyup", function (event) {
     if (event.keyCode === 13) {
         event.preventDefault();
