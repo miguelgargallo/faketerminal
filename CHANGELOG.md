@@ -1,6 +1,7 @@
 # Update Log
 
 - [Update Log](#update-log)
+  - [gh 0.0.8 | Readme Optimized](#gh-008--readme-optimized)
   - [gh 0.0.7 | Blinked not blinking](#gh-007--blinked-not-blinking)
   - [gh 0.0.6 | CSS Optimized](#gh-006--css-optimized)
   - [gh 0.0.5 | The Viewport Update:](#gh-005--the-viewport-update)
@@ -8,6 +9,7 @@
   - [gh 0.0.3 | It prints about!](#gh-003--it-prints-about)
   - [gh 0.0.1 | Surce Code](#gh-001--surce-code)
 
+## gh 0.0.8 | Readme Optimized
 ## gh 0.0.7 | Blinked not blinking
 ## gh 0.0.6 | CSS Optimized
 ## gh 0.0.5 | The Viewport Update:
